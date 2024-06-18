@@ -1,0 +1,14 @@
+Lab: Basic SSRF against the local server
+
+This lab has a stock check feature which fetches data from an internal system.
+To solve the lab, change the stock check URL to access the admin interface at http://localhost/admin and delete the user carlos.
+
+Analysis:
+Check stock of item on web page
+Open Burpsuite and send page info to Repeater for further investigation
+localhost: http://localhost/
+admin interface: http://localhost/admin
+Render the script to visualize Amin users; where Carlos is listed
+Command + F to locate where Carlos is located as user
+http://localhost/admin/delete?username=carlos
+Command + F to ensure Carlos has been deleted 
